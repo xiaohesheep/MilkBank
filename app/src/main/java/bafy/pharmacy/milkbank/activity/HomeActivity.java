@@ -16,7 +16,7 @@ import bafy.pharmacy.milkbank.common.MyFragment;
 import bafy.pharmacy.milkbank.helper.ActivityStackManager;
 import bafy.pharmacy.milkbank.helper.DoubleClickHelper;
 import bafy.pharmacy.milkbank.other.KeyboardWatcher;
-import bafy.pharmacy.milkbank.ui.fragment.TestFragmentB;
+import bafy.pharmacy.milkbank.ui.fragment.TestFragmentANew;
 import bafy.pharmacy.milkbank.ui.fragment.TestFragmentC;
 import bafy.pharmacy.milkbank.ui.fragment.TestFragmentD;
 import butterknife.BindView;
@@ -55,8 +55,8 @@ public final class HomeActivity extends MyActivity
     @Override
     protected void initData() {
         mPagerAdapter = new BaseFragmentAdapter<>(this);
+        mPagerAdapter.addFragment(TestFragmentANew.newInstance());
         mPagerAdapter.addFragment(TestFragmentC.newInstance());
-        mPagerAdapter.addFragment(TestFragmentB.newInstance());
         mPagerAdapter.addFragment(TestFragmentD.newInstance());
         mPagerAdapter.addFragment(TestFragmentD.newInstance());
 
@@ -74,10 +74,10 @@ public final class HomeActivity extends MyActivity
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.menu_home:
-                mPagerAdapter.setCurrentItem(TestFragmentC.class);
+                mPagerAdapter.setCurrentItem(TestFragmentANew.class);
                 return true;
             case R.id.home_found:
-                mPagerAdapter.setCurrentItem(TestFragmentD.class);
+                mPagerAdapter.setCurrentItem(TestFragmentC.class);
                 return true;
             case R.id.home_message:
                 mPagerAdapter.setCurrentItem(TestFragmentD.class);
