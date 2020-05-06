@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/logonbgnew"
+    android:orientation="vertical" >
+
+    <LinearLayout
+
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/relativelayout"
+            android:layout_width="285dp"
+            android:layout_height="244dp"
+
+            android:layout_marginTop="200.0px"
+            android:paddingBottom="10.0px"
+            android:paddingTop="25.0px"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+
+            >
+
+
+
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="1.0dip"
+                android:layout_marginLeft="1.0dip"
+                android:layout_marginRight="1.0dip"
+                android:layout_marginTop="1.0dip"
+                android:hint=""
+                android:paddingLeft="55.0sp"
+                android:saveEnabled="true"
+                android:singleLine="true"
+                android:background="@drawable/edit_login"
+                android:textColor="#ff3f3f3f" />
+
+            <TextView
+                android:id="@+id/textview01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/username"
+                android:layout_alignLeft="@+id/username"
+                android:layout_alignTop="@+id/username"
+                android:layout_marginRight="15.0sp"
+                android:gravity="center_vertical"
+                android:paddingLeft="7.0sp"
+                android:text="用户:"
+                android:textColor="#ff3f3f3f"
+                android:textSize="16.0dip" />
+
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/username"
+                android:layout_alignRight="@+id/username"
+                android:layout_below="@+id/username"
+                android:layout_marginRight="1.0dip"
+                android:hint=""
+                android:paddingLeft="55.0sp"
+                android:inputType="textPassword"
+                android:background="@drawable/edit_login"
+                android:saveEnabled="true"
+                android:singleLine="true"
+                />
+            <TextView
+                android:id="@+id/textview02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/password"
+                android:layout_alignRight="@+id/textview01"
+                android:layout_alignTop="@+id/password"
+                android:gravity="center_vertical"
+                android:paddingLeft="7.0sp"
+                android:text="密码:"
+                android:textColor="#ff3f3f3f"
+                android:textSize="16.0dip" />
+
+            <Button
+                android:id="@+id/login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/password"
+                android:layout_marginTop="7.0px"
+                android:layout_alignLeft="@+id/username"
+                android:layout_alignRight="@+id/username"
+                android:gravity="center"
+                android:textSize="18.0dip"
+                android:textColor="#ffffffff"
+                android:background="@drawable/loginbtn"
+                android:text="" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
