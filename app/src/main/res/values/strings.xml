@@ -195,4 +195,17 @@
     <string name="photo_launch_fail">无法启动相机</string>
     <string name="photo_picture_error">图片错误</string>
 
+    <!--医嘱列表-->
+    <string name="ordlist">医嘱列表</string>
+    <string name="ward">病区</string>
+    <string name="date">日期</string>
+    <string name="bedno">床号</string>
+    <string name="patname">姓名</string>
+    <string name="ordname">医嘱名称</string>
+    <string name="dose">剂量</string>
+    <string name="inst">用法</string>
+    <string name="freq">频次</string>
+    <string name="ordstatus">医嘱状态</string>
+
+
 </resources>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activity.OrderListActivity">
+
+    <!-- 医嘱列表界面
+     开始日期 结束日期 查询按钮
+     病区   *强化剂按钮*
+
+     级联列表
+     床号 姓名 病区
+     医嘱名称 剂量 用法 频次  医嘱状态
+-->
+
+    <com.hjq.bar.TitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="@string/ordlist" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.8"
+            android:layout_height="40dp"
+            android:text="@string/date"
+            android:textSize="15.0sp"
+            android:gravity="center_vertical" />
+
+        <EditText
+            style="@style/EditTextStyle"
+            android:id="@+id/search_stdate"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:layout_marginTop="1.0sp"
+            android:textSize="15sp"
+            android:text=""
+            android:gravity="center"
+            android:textColor="#ff3f3f3f"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="40dp"
+            android:text=" 至"
+            android:textSize="15.0sp"
+            android:gravity="center" />
+
+        <EditText
+            style="@style/EditTextStyle"
+            android:id="@+id/search_enddate"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:layout_marginTop="1.0sp"
+            android:textSize="15sp"
+            android:text=""
+            android:gravity="center"
+            android:textColor="#ff3f3f3f"
+            />
+
+    </LinearLayout>
+
+    <View
+        style="@style/HorizontalLineStyle"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="40dp"
+            android:text="病区"
+            android:textSize="15.0sp"
+            android:gravity="center_vertical" />
+
+        <EditText
+            style="@style/EditTextStyle"
+            android:id="@+id/search_ward"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:layout_marginTop="1.0sp"
+            android:textSize="14sp"
+            android:text="请选择病区..."
+            android:gravity=""
+            android:textColor="#cdcdcd"
+            />
+
+        <Button
+            android:id="@+id/select_ward"
+            android:layout_width="0dp"
+            android:layout_weight="0.3"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+
+            android:layout_alignBottom="@+id/search_ward"
+            android:layout_alignRight="@+id/search_ward"
+            android:layout_alignTop="@+id/search_ward"
+            android:background="@drawable/down2"
+            android:text="" />
+
+        <Button
+            android:id="@+id/search_btn"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:background="@drawable/search2"/>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ordlist_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+
+</LinearLayout>
+
+

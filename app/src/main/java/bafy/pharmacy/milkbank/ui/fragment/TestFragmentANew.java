@@ -6,6 +6,7 @@ import bafy.pharmacy.milkbank.R;
 import bafy.pharmacy.milkbank.activity.HomeActivity;
 import bafy.pharmacy.milkbank.aop.SingleClick;
 import bafy.pharmacy.milkbank.common.MyFragment;
+import bafy.pharmacy.milkbank.ui.activity.OrderListActivity;
 
 public class TestFragmentANew extends MyFragment<HomeActivity> {
 
@@ -21,8 +22,8 @@ public class TestFragmentANew extends MyFragment<HomeActivity> {
 
     @Override
     protected void initView() {
-        setOnClickListener(R.id.btn_bggl,R.id.btn_mrpz);
-
+        setOnClickListener(R.id.btn_yzlb,R.id.btn_bggl,R.id.btn_mrpz);
+        this.setTitle("我要改变标题信息");
     }
 
     @Override
@@ -34,6 +35,9 @@ public class TestFragmentANew extends MyFragment<HomeActivity> {
     @Override
     public void onClick(View v){
         switch (v.getId()) {
+            case R.id.btn_yzlb:
+                startActivity(OrderListActivity.class);
+                break;
             case R.id.btn_bggl:
 //                startActivity(DialogActivity.class);
                 break;
