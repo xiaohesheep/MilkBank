@@ -1,0 +1,32 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    >
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="wrap_content"
+        android:id="@+id/patBedNo"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="2dp"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:id="@+id/patName"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="2dp"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:layout_height="wrap_content"
+        android:id="@+id/patWard"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="2dp"/>
+
+</LinearLayout>
